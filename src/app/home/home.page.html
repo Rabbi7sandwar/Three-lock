@@ -1,0 +1,14 @@
+<ion-content [fullscreen]="true">
+    <div class="main-container">
+
+        <button *ngIf="!start" (click)="play()">Click to play</button>
+        <div *ngIf="start" class="container">
+            <p>Choose the right box to continue</p>
+            <div class="board">
+                <div *ngFor="let tileContent of tileContents; let i = index" class="tile" (click)="result(tileContent)">{{
+                    tileContent }}</div>
+            </div>
+
+        </div>
+    </div>
+</ion-content>

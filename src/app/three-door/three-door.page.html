@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Enter the Passcode </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main-container">
+   <div class="door" (click)="door2Puzzle()">
+    <img src={{doorImage2}}>
+   </div>
+   <div  class="door" (click)="door3Puzzle()">
+    <img src={{doorImage3}}>
+   </div>
+   <div  class="door" (click)="door1Puzzle()">
+    <img src={{doorImage1}}>
+   </div>
+  </div>
+</ion-content>
