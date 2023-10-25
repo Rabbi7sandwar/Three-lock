@@ -44,5 +44,9 @@ export class ThreeDoorPage implements OnInit {
     this.router.navigate(['/door3-puzzle'])
   }
 
+  cancel(){
+    this.router.navigate(['/home'])
+  }
+
 
 }

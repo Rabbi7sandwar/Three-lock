@@ -1,13 +1,36 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>door2Puzzle</ion-title>
+    <ion-title slot="start">
+      See and Remember
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancel()" [strong]="true">X</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">door2Puzzle</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div class="main">
+  <div class="boxes" >
+    <div class="figure">
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 1 </div>
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 4 </div>
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 1 </div>
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 4 </div>
+    </div>
+    <div class="figure">
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 4 </div>
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 1 </div>
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 2 </div>
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 3 </div>
+    </div>
+    <div class="figure">
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 3 </div>
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 2 </div>
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 3 </div>
+      <div class="figureBoxes {{displayFigure}} {{showBox}}"> 2 </div>
+    </div>
+  </div>
+</div>
 </ion-content>
