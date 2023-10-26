@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Door1PuzzlePage } from '../door1-puzzle/door1-puzzle.page';
 import { Router } from '@angular/router';
+import { Door2PuzzlePage } from '../door2-puzzle/door2-puzzle.page';
+import { Door3PuzzlePage } from '../door3-puzzle/door3-puzzle.page';
 
 @Component({
   selector: 'app-three-door',
@@ -37,11 +39,13 @@ export class ThreeDoorPage implements OnInit {
   }
   
   door2Puzzle(){
-    this.router.navigate(['/door2-puzzle'])
+    this.openModal(Door2PuzzlePage)
+    // this.router.navigate(['/door2-puzzle'])
   }
 
   door3Puzzle(){
-    this.router.navigate(['/door3-puzzle'])
+    this.openModal(Door3PuzzlePage)
+    // this.router.navigate(['/door3-puzzle'])
   }
 
   cancel(){
