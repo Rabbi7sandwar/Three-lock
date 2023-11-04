@@ -11,24 +11,7 @@
         justify-content: space-around;
         padding: 5%;
     }
-    .figure{
-        display: flex;
-        flex-direction: row;
-        width: 94%;
-        justify-content: space-around;
-        .figureBoxes{
-            border: 1px solid;
-            padding: 20px;
-            height: 190%;
-            width: 20%;
-            background-color: aqua;
-        }
-        .show{
-           color: aqua
-        }
-        .showBox{
-            display: block;
-        }
+    
     }
 
-}
+
