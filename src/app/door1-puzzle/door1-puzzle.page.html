@@ -1,40 +1,26 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar style=" font-family: Griffy; font-weight: 900;">
     <ion-title slot="start">
-      Spot 5 mistakes
+      who am i ??
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="cancel()" [strong]="true">X</ion-button>
+      <ion-button (click)="cancel('cancel')" [strong]="true">X</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="spotBox">
-    <div class="image2">
-      <div (click)="dot1()" class="area ">
-        <div *ngIf="showDot1" class="dot">
-        </div>
-      </div>
-      <div (click)="dot2()" class="area dot2Position">
-        <div *ngIf="showDot2" class="dot">
-        </div>
-      </div>
-      <div (click)="dot3()" class="area dot3Position">
-        <div *ngIf="showDot3" class="dot">
-        </div>
-      </div>
-      <div (click)="dot4()" class="area dot4Position">
-        <div *ngIf="showDot4" class="dot">
-        </div>
-      </div>
-      <div (click)="dot5()" class="area dot5Position">
-        <div *ngIf="showDot5" class="dot">
-        </div>
-      </div>
-    </div>
-    <div class="image1">
-    </div>
+ <div class="mainScreen">
+  <div class="riddle">
+    <p>{{riddle}}</p>
+    <input
+  type="text"
+  id="inputField"
+  [(ngModel)]="inputValue"
+  name="inputField"
+  (input)="onInput()"
+  placeholder="Enter your answer here...."
+/>
   </div>
+ </div>
 </ion-content>
-

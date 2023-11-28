@@ -1,63 +1,63 @@
-.spotBox{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 5%;
-    align-items: center;
-    .image1{
-        background-image: url("../../assets/images/difference.jpg");
-        width: 100%;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        height: 48%;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    .image2{
-        background-image: url("../../assets/images/difference2.jpg");
-        width: 100%;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        height: 48%;
-        background-repeat: no-repeat;
-        background-size: contain;
+// .spotBox{
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     height: 100%;
+//     padding: 5%;
+//     align-items: center;
+//     .image1{
+//         background-image: url("../../assets/images/difference.jpg");
+//         width: 370.812px;
+//         border-top: 1px solid;
+//         border-bottom: 1px solid;
+//         height: 390.547px;
+//         background-repeat: no-repeat;
+//         background-size: contain;
+//     }
+//     .image2{
+//         background-image: url("../../assets/images/difference2.jpg");
+//         width: 370.812px;
+//         border-top: 1px solid;
+//         border-bottom: 1px solid;
+//         height: 390.547px;
+//         background-repeat: no-repeat;
+//         background-size: contain;
 
-    }
+//     }
 
-    .dot{
-        border: 2px solid red;
-        width: 25px;
-        height: 25px;
-        margin-top: 9px;
-        margin-left: 7px;
-        border-radius: 50%;
-    }
-    .area{
-        width: 30px;
-        height: 30px;
-        // margin-top: 9px;
-        // margin-left: 7px;
-    }
+//     .dot{
+//         border: 2px solid red;
+//         width: 25px;
+//         height: 25px;
+//         margin-top: 9px;
+//         margin-left: 7px;
+//         border-radius: 50%;
+//     }
+//     .area{
+//         width: 30px;
+//         height: 30px;
+//         // margin-top: 9px;
+//         // margin-left: 7px;
+//     }
 
-    .dot2Position{
-        position: fixed;
-        top: 256px;
-        left: 86px;
-    }
-    .dot3Position{
-        position: fixed;
-        top: 410px;
-        left: 75px;
-    }
-    .dot4Position{
-        position: fixed;
-        top: 385px;
-        left: 260px;
-    }
-    .dot5Position{
-        position: fixed;
-        top: 275px;
-        left: 147px;
-    }
-}
+//     .dot2Position{
+//         position: fixed;
+//         top: 256px;
+//         left: 86px;
+//     }
+//     .dot3Position{
+//         position: fixed;
+//         top: 410px;
+//         left: 75px;
+//     }
+//     .dot4Position{
+//         position: fixed;
+//         top: 385px;
+//         left: 260px;
+//     }
+//     .dot5Position{
+//         position: fixed;
+//         top: 275px;
+//         left: 147px;
+//     }
+// }

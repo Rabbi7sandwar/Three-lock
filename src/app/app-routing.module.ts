@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'door3-puzzle',
     loadChildren: () => import('./door3-puzzle/door3-puzzle.module').then( m => m.Door3PuzzlePageModule)
+  },  {
+    path: 'rewards',
+    loadChildren: () => import('./rewards/rewards.module').then( m => m.RewardsPageModule)
   },
+
 ];
 
 @NgModule({

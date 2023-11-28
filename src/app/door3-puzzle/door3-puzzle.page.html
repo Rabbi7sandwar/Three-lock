@@ -1,13 +1,56 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>door3Puzzle</ion-title>
+  <ion-toolbar style=" font-family: Griffy; font-weight: 900;">
+    <ion-title slot="start">
+      Solve the crossword-puzzle
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancel('cancel')" [strong]="true">X</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">door3Puzzle</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="main-container">
+    <p style="color: red; font-family: Griffy;"><strong>Hint: <span style="color: aqua;">Socializing </span></strong></p>
+    <div class="crossword-puzzle">
+
+      <div *ngFor="let row of puzzle; let i = index" class="crossword-row">
+        <div *ngFor="let cell of row; let j = index" class="crossword-cell">
+          <ng-container *ngIf="cell === null; else wordTemplate">
+            <div class="readonly-cell"></div>
+          </ng-container>
+          <ng-template #wordTemplate>
+            <input type="text" maxlength="1" [(ngModel)]="userInput[i][j]" [ngClass]="{ 'correct': checkCorrectness(i, j) }"
+              [attr.readonly]="cell === null ? true : null" [style.background]="cell === null ? 'red' : 'white'" />
+          </ng-template>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<!-- 
+  <div class="crossword-puzzle">
+    <div *ngFor="let row of puzzle; let i = index" class="crossword-row">
+      <div *ngFor="let cell of row; let j = index" class="crossword-cell">
+        <ng-container *ngIf="cell === null; else wordTemplate">
+          <div class="readonly-cell"></div>
+        </ng-container>
+        <ng-template #wordTemplate>
+          <input
+            type="text"
+            [(ngModel)]="userInput[i][j]"
+            [ngClass]="{ 'correct': checkCorrectness(i, j) }"
+            [attr.readonly]="cell === null ? true : null"
+            [style.background]="cell === null ? '#ccc' : 'white'"
+          />
+        </ng-template>
+      </div>
+    </div>
+  </div> -->
+  
+  
+
+
+
+
 </ion-content>

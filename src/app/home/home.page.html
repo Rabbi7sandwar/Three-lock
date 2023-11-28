@@ -1,9 +1,9 @@
 <ion-content [fullscreen]="true">
-    <div class="main-container">
+    <div class="{{main_container}}">
 
-        <button *ngIf="!start" (click)="play()">Click to play</button>
+        <button *ngIf="!start" (click)="play()" style=" font-family: Griffy; font-weight: 900;font-size: x-large;">Tap here to play</button>
         <div *ngIf="start" class="container">
-            <p>Choose the right box to continue</p>
+            <p>Choose the right black door to continue</p>
             <div class="board">
                 <div *ngFor="let tileContent of tileContents; let i = index" class="tile" (click)="result(tileContent)">{{
                     tileContent }}</div>

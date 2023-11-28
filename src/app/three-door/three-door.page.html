@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title slot="start">
+    <ion-title *ngIf="play" slot="start">
+      Remember the passcode
+    </ion-title>
+    <ion-title *ngIf="!play && !finalDoor" slot="start">
       Enter the passcode
     </ion-title>
     <ion-buttons slot="end">
@@ -12,15 +15,63 @@
 
 
 <ion-content [fullscreen]="true">
-  <div class="main-container">
-   <div class="door" (click)="door2Puzzle()">
-    <img src={{doorImage2}}>
+  <div class="main-container" *ngIf="play">
+   <div class="door" (click)="door2Puzzle()" >
+    <img *ngIf="door2" src={{doorImage2}} style="height: 63%;">
    </div>
-   <div  class="door" (click)="door3Puzzle()">
-    <img src={{doorImage3}}>
+   <div  class="door" (click)="door1Puzzle()" >
+    <img *ngIf="door1" src={{doorImage1}} style="height: 63%;">
    </div>
-   <div  class="door" (click)="door1Puzzle()">
-    <img src={{doorImage1}}>
+   <div  class="door" (click)="door3Puzzle()" >
+    <img   src={{doorImage3}} style="height: 63%;">
    </div>
   </div>
+  <div class="main-container" *ngIf="!play">
+    <div  *ngIf="finalDoor">
+      <img src={{doorImage}} style="height: 63%;" (click)="enter()">
+    </div>
+<div class="passcodes" *ngIf="!finalDoor">
+  <!-- <p style="color: red; font-family: Griffy;"><strong>Enter your passcodes</strong></p> -->
+  <div >
+    <label for="inputField" style="color: white; font-family: Griffy;">Enter First Door Passcodes</label>
+  
+    <input
+      type="text"
+      id="inputField"
+      [(ngModel)]="inputValue"
+      name="inputField"
+      (input)="onInput()"
+      maxlength="4"
+    />
+   </div>
+<br>
+ <div *ngIf = "second">
+  <label for="inputField" style="color: white; font-family: Griffy;">Enter Second Door Passcodes</label>
+
+  <input
+    type="text"
+    id="inputField"
+    [(ngModel)]="inputValue1"
+    name="inputField"
+    (input)="onInput()"
+    maxlength="4"
+  />
+ </div>
+ <br>
+ <div *ngIf = "third">
+  <label for="inputField" style="color: white; font-family: Griffy;">Enter Third Door Passcodes</label>
+
+  <input
+    type="text"
+    id="inputField"
+    [(ngModel)]="inputValue2"
+    name="inputField"
+    (input)="onInput()"
+    maxlength="4"
+  />
+ </div>
+
+</div>
+  </div>
+
 </ion-content>

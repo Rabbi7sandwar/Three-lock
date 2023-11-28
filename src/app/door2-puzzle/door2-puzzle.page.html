@@ -1,10 +1,10 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar style=" font-family: Griffy; font-weight: 900;">
     <ion-title slot="start">
       See and Remember
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="cancel()" [strong]="true">X</ion-button>
+      <ion-button (click)="cancel('cancel')" [strong]="true">X</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -14,8 +14,21 @@
 <div class="main">
   <div class="boxes" >
     
-    <p>{{ currentElement }}</p>
-    
+    <p *ngIf="!optShow"><strong>{{ currentElement }}</strong></p>
+    <!-- <p><strong>5</strong></p> -->
+  </div>
+  <div class="option" *ngIf="optShow">
+    <div *ngFor="let opt of optForSet ">
+      <input
+      type="radio"
+      id="a"
+      name="sample"
+      value="{{opt}}"
+      (change)="onChange($event)"
+       /> 
+      <label for="a">{{opt}}</label> 
+      
+    </div>
   </div>
 </div>
 </ion-content>

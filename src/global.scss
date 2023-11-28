@@ -8,8 +8,64 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
-
+@font-face {
+  font-family: 'Griffy';
+  src: url('assets/Griffy/Griffy-Regular.ttf')format('truetype');
+  font-weight: bolder;
+  font-size: normal;
+}
+body {
+  // font-family: 'Griffy' ;
+  font-family: Griffy;
+}
 ion-backdrop {
     background: var(--ion-color-dark);
     opacity: 0.3;
   }
+
+  ion-toolbar{
+    // --background: radial-gradient(#00000021, #0000002e, #000000bf),url("assets/images/brick.jpg");
+    --background: radial-gradient(#000000, #000000, #000000),url("assets/images/brick.jpg");
+    ion-title{
+      font-family: Griffy;
+      font-weight: 900;
+      color: red
+    }
+  }
+
+  // ion-content{
+  //   // --background: radial-gradient(#00000021, #0000002e, #000000bf),url("assets/images/brick.jpg");
+  //   // --background-color: black
+  //   // --background: radial-gradient(#000000, #000000, #000000),url("assets/images/brick.jpg")
+
+
+  // }
+
+  .custom-alert{
+    background-color: black;
+    font-family: Griffy;
+    color: red;
+}
+
+.custom-alert .alert-wrapper {
+  background-color: black;
+  color: red; /* Set the desired text color for the message */
+}
+
+.mainScreen{
+  background: black;
+  height: 100%;
+  width: 100%;
+  font-size: larger;
+  font-family: 'Griffy';
+  padding: 15%;
+ .riddle{
+  input{
+    width: 100%;
+  }
+  p{
+    margin-top: 0px;
+    color: white;
+  }
+ }
+}

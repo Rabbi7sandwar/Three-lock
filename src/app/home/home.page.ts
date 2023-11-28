@@ -10,8 +10,10 @@ import { AlertController } from '@ionic/angular';
 export class HomePage {
   start = false
   tileContents: (number | null)[] = [1, 2,3,4 ,5 ];
-
-  constructor(private alertController: AlertController,private router: Router) { }
+  main_container = "main-container"
+  constructor(private alertController: AlertController,private router: Router) { 
+    
+  }
 
   shuffleArray(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -22,6 +24,7 @@ export class HomePage {
 
   play(){
     this.start = true
+    this.main_container = "game_container"
     this.shuffleArray(this.tileContents);
   }
 
@@ -31,11 +34,11 @@ export class HomePage {
       this.router.navigate(['/three-door'])
     }
     else if(index != 2 && index !=4){
-     this.presentAlert("","Loser","Start Again")
+     this.presentAlert("","Oops Wrong door","Tap to choose") 
      this.play();
     }
     else if(index == 4){
-      this.presentAlert("","","Try Again")
+      this.presentAlert("","choose another door","Tap to choose another door")
     }
   }
 
